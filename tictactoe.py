@@ -1,4 +1,5 @@
 #Author: Shraddha Bhise
+#!/usr/bin/python3
 
 import random
 import matplotlib.pyplot as plot
@@ -182,6 +183,29 @@ def drawGraph():
     print("")
     print("Number of nodes expanded for minimax",nodes_minimax)
     print("Number of nodes expanded for alpha beta pruning",nodes_alphabeta)
+
+    left = ['Minimax', 'Alpha Beta Pruning']
+    height = [nodes_minimax, nodes_alphabeta]
+
+    # x axis values
+    x = left
+    # corresponding y axis values
+    y = height
+
+    # plotting the points
+    plot.bar(x, y, align='center')
+
+    # naming the x axis
+    plot.xlabel('Algorithms')
+    # naming the y axis
+    plot.ylabel('Nodes Expanded')
+
+    # giving a title to my graph
+    plot.title('Comparison of Nodes expanded for algorithms')
+
+    # function to show the plot
+    plot.show()
+
     return
 
 if __name__ == "__main__":
